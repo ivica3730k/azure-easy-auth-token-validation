@@ -102,5 +102,3 @@ def get_public_key(token, tenant_id=None):
     kid = get_kid(token)
     jwk = get_jwk(kid, tenant_id)
     return rsa_pem_from_jwk(jwk)
-
-    return rsa_pem_from_jwk(get_jwk(get_kid(token)))
